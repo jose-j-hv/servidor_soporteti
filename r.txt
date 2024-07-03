@@ -1,0 +1,43 @@
+npm init
+    entry point: (index.js) ingresen app.js
+
+npm install --save express body-parser morgan
+
+npm i -D nodemon
+
+npm start
+
+npm install -g sequelize-cli
+
+npm install --save sequelize
+npm install --save mysql3
+npm install --save mysql2
+
+sequelize init
+
+CREATE DATABASE `nombreDeLaBaseDeDatos`
+
+sequelize model:create --name ubicacion --attributes nombre:string,calle:string,CP:INTEGER,colonia:string,referencias:string
+
+sequelize model:create --name tema --attributes nombre:string,descripcion:string,prioridad
+
+sequelize model:create --name sub_area --attributes nombre:string,uicacion_id:string,area_p_id:string
+
+sequelize model:create --name resp_area --attributes responsable_id,string,area_id:string
+
+sequelize model:create --name usuario --attributes nombre:string,correo:string,puesto:string,password:string,telefono:integer,create_u_id:string
+
+sequelize model:create --name ticket --attributes titulo:string,descripcion:string,descripcion:string,tema_id:string,contacto_id:string
+
+sequelize model:create --name status --attributes ticket_id:string,ticket_id:string,status:string,usuario_id:string
+
+sequelize model:create --name mensaje --attributes ticket_id:string,usuario_id:string,mensaje:string
+
+sequelize model:create --name tarea --attributes mes:string,inicio:DATE,tiempo_total:date,usuario_id:integer,max_tiempo:time,area_id:integer,tema_id:INTEGER,ubicacion_id:INTEGER,ticket_id:INTEGER
+
+sequelize model:create --name evidencias --attributes tiket_id:INTEGER,usuario_id:INTEGER,evidencia:BIT
+
+sequelize model:create --name kpi --attributes nombre:string,area_ti_id:INTEGER,descripcion:string
+
+sequelize model:create --name kpi_h --attributes kpi_id:INTEGER,usuario_id:INTEGER,mes:string,cumplimiento:BOOLEAN,numero_tickets:INTEGER
+
